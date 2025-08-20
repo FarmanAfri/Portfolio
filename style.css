@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url(/red-light-round-podium-black-background-mock-up.jpg);
+}
+.app-btn {
+    position: absolute; /* or relative to parent with position: relative */
+    top: 50%;           /* vertical center */
+    left: 50%;          /* horizontal center */
+    transform: translate(-50%, -50%) scale(0.5); /* center & start smaller */
+    padding: 15px 40px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #de0f0f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0; /* start invisible */
+    animation: btnAppear 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Hover effect */
+.app-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Entrance animation */
+@keyframes btnAppear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(50px) scale(0.5); /* start below */
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(-10px) scale(1.2); /* slight bounce */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0) scale(1); /* final position */
+    }
+}
