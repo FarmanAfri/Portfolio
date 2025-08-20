@@ -1,0 +1,147 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+          animation: fadeIn 2s ease-in-out;
+     /* background: linear-gradient(135deg, #74ebd5, #9face6);; */
+     background-image: url(./2025-07-13-image-6-j.webp);
+     
+     
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-attachment: fixed;
+    font-weight: 50px;
+    
+    
+}
+
+.logo {
+  position: relative; /* container ke liye */
+  overflow: hidden;   /* taake image background ke under se aaye */
+  width: 130px;
+  height: 130px;
+}
+
+.logo img {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border-bottom-right-radius: 13px ;
+  border-color: rgba(228, 239, 11, 0.22);
+  border-width: 5px;
+  object-fit: cover;
+  position: relative;
+  animation: slideIn 4s ease-out forwards;
+}
+
+/* Keyframes: left se slide in */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-200px); /* side se start */
+    opacity: 0;                   /* invisible se start */
+  }
+  100% {
+    transform: translateX(0);      /* apni jagah pe */}
+
+}
+
+/* main nav hai oske under div hia div ke under ul ke under li*/
+
+.niv-div li{
+    display: inline;
+    padding-right: 20px;
+    margin-right: 25px;
+    /* background-color: blue; */
+    color: #de0f0f; /* text color */
+    text-decoration: none;
+    font: size 22px;
+    text-shadow: 4px 4px 10px rgba(200, 210, 17, 0.22); /* x-offset, y-offset, blur, color */
+
+
+}
+
+
+
+#main-div {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* paragraph */
+
+.para-left{
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    font-size: 20px;
+    margin-left: 90px;
+    margin-top: 90px;
+    padding-left: 10px 5px;
+    color: rgb(232, 232, 9);
+}
+
+
+
+
+.para-left h1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #ec0b0b;
+}
+.para-left h1 {
+    opacity: 0; /* start invisible */
+    transform: translateX(-100px); /* start slightly left */
+    animation: slideInH1 1s ease-out forwards;
+    animation-delay: 0.5s; /* optional: delay before animation starts */
+}
+
+@keyframes slideInH1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    70% {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Pic right */
+
+.pic-right{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-right: 14px;
+ border: #de0f0f;
+ width: 70%;
+ height: 50%;
+  margin-top: 20px;
+    padding-left: 10px 5px;
+}
+
+.pic-right img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: bounceLogo 5s ease-in-out infinite;
+}
+
+@keyframes bounceLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-45px); }
+}
